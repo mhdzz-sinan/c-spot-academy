@@ -137,66 +137,7 @@ ON CONFLICT (workshop_id, day_number) DO UPDATE SET
     topics = EXCLUDED.topics,
     hands_on_project = EXCLUDED.hands_on_project;
 
-INSERT INTO public.workshops (
-    id,
-    slug,
-    title,
-    subtitle,
-    type,
-    description,
-    highlights,
-    prerequisites,
-    deliverables,
-    price_inr,
-    original_price_inr,
-    currency,
-    schedule_summary,
-    mode,
-    max_seats,
-    seats_filled,
-    is_active,
-    is_featured,
-    registration_open,
-    instructor_name
-) VALUES (
-    '22222222-2222-4222-8222-222222222202',
-    'advanced-product-design-dfm',
-    'Advanced Product Design, Sheet Metal, Surfacing & DFM Track',
-    'A 6-week cohort-based specialization taking you from CAD operator to industry-ready Mechanical Product Design Engineer.',
-    'ADVANCED_COURSE',
-    'Designed for graduates of our SolidWorks Bootcamp and practicing engineers seeking mastery in complex surfacing, sheet-metal enclosures, tolerance stack-up analysis, and real-world vendor manufacturing workflows.',
-    '[
-        "Class-A Hybrid Surface Modeling for Consumer & EV Hardware",
-        "Sheet Metal Bend Allowances, K-Factor & Flat Pattern DXF Exports",
-        "1D/2D Tolerance Stack-Up Analysis & GD&T per ASME Y14.5",
-        "1-on-1 Capstone Project Reviews & Mock Technical Interviews"
-    ]'::jsonb,
-    '[
-        "Completion of SolidWorks CAD Bootcamp or equivalent 3D CAD experience"
-    ]'::jsonb,
-    '[
-        "6 Weeks of Live Weekend Mentorship & Design Reviews",
-        "3 Industry-Grade Capstone Hardware Projects",
-        "Placement & Portfolio Review Support"
-    ]'::jsonb,
-    7999,
-    14999,
-    'INR',
-    '6 Weeks • Weekend Live Cohort (Next Batch Opening Soon)',
-    'Cohort Live + 1-on-1 Design Critiques',
-    40,
-    0,
-    TRUE,
-    FALSE,
-    FALSE,
-    'C-Spot Senior Product Architects'
-)
-ON CONFLICT (slug) DO UPDATE SET
-    title = EXCLUDED.title,
-    subtitle = EXCLUDED.subtitle,
-    price_inr = EXCLUDED.price_inr,
-    is_active = EXCLUDED.is_active;
-
+-- 2. System Settings
 INSERT INTO public.system_settings (key, value, description, is_secret, updated_by)
 VALUES
     (

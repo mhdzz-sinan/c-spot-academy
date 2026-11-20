@@ -32,12 +32,6 @@ export function Header() {
             SolidWorks Bootcamp
           </Link>
           <Link
-            href="/courses/advanced-product-design-dfm"
-            className="hover:text-slate-900 transition-colors"
-          >
-            Advanced DFM Track
-          </Link>
-          <Link
             href="/about"
             className="hover:text-slate-900 transition-colors"
           >
@@ -86,13 +80,6 @@ export function Header() {
             className="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
           >
             SolidWorks 3D CAD Bootcamp
-          </Link>
-          <Link
-            href="/courses/advanced-product-design-dfm"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
-          >
-            Advanced Product Design Track
           </Link>
           <Link
             href="/lookup"

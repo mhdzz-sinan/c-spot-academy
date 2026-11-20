@@ -21,7 +21,6 @@ export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
   const featuredWorkshop = await db.getWorkshopBySlug('solidworks-cad-bootcamp');
-  const advancedCourse = await db.getWorkshopBySlug('advanced-product-design-dfm');
 
   const seatsRemaining = featuredWorkshop
     ? Math.max(0, featuredWorkshop.max_seats - featuredWorkshop.seats_filled)
@@ -292,33 +291,6 @@ export default async function HomePage() {
                   )}
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {advancedCourse && (
-        <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="rounded-3xl bg-slate-900 p-8 sm:p-12 text-white flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-            <div className="space-y-3 max-w-2xl">
-              <span className="inline-block rounded-full bg-sky-500/15 px-3 py-1 text-xs font-mono font-semibold text-sky-400">
-                NEXT STEP SPECIALIZATION
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold">
-                {advancedCourse.title}
-              </h2>
-              <p className="text-sm sm:text-base text-slate-300">
-                {advancedCourse.subtitle}
-              </p>
-            </div>
-            <div className="shrink-0">
-              <Link
-                href={`/courses/${advancedCourse.slug}`}
-                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-800 px-6 py-3.5 text-sm font-semibold text-white hover:bg-slate-700 transition-colors"
-              >
-                Explore Advanced Track
-                <ArrowRight className="h-4 w-4" />
-              </Link>
             </div>
           </div>
         </section>

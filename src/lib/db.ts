@@ -90,47 +90,6 @@ function createInitialMemoryStore(): MemoryStore {
     updated_at: now,
   };
 
-  const advancedCourse: Workshop = {
-    id: '22222222-2222-4222-8222-222222222202',
-    slug: 'advanced-product-design-dfm',
-    title: 'Advanced Product Design, Sheet Metal, Surfacing & DFM Track',
-    subtitle:
-      'A 6-week cohort-based specialization taking you from CAD operator to industry-ready Mechanical Product Design Engineer.',
-    type: 'ADVANCED_COURSE',
-    description:
-      'Designed for graduates of our SolidWorks Bootcamp and practicing engineers seeking mastery in complex surfacing, sheet-metal enclosures, tolerance stack-up analysis, and real-world vendor manufacturing workflows.',
-    highlights: [
-      'Class-A Hybrid Surface Modeling for Consumer & EV Hardware',
-      'Sheet Metal Bend Allowances, K-Factor & Flat Pattern DXF Exports',
-      '1D/2D Tolerance Stack-Up Analysis & GD&T per ASME Y14.5',
-      '1-on-1 Capstone Project Reviews & Mock Technical Interviews',
-    ],
-    prerequisites: [
-      'Completion of SolidWorks CAD Bootcamp or equivalent 3D CAD experience',
-    ],
-    deliverables: [
-      '6 Weeks of Live Weekend Mentorship & Design Reviews',
-      '3 Industry-Grade Capstone Hardware Projects',
-      'Placement & Portfolio Review Support',
-    ],
-    price_inr: 7999,
-    original_price_inr: 14999,
-    currency: 'INR',
-    start_date: null,
-    end_date: null,
-    schedule_summary: '6 Weeks • Weekend Live Cohort (Next Batch Opening Soon)',
-    mode: 'Cohort Live + 1-on-1 Design Critiques',
-    max_seats: 40,
-    seats_filled: 0,
-    is_active: true,
-    is_featured: false,
-    registration_open: false,
-    instructor_name: 'C-Spot Senior Product Architects',
-    instructor_bio: null,
-    created_at: now,
-    updated_at: now,
-  };
-
   const workshopDays: WorkshopDay[] = [
     {
       id: '33333333-3333-4333-8333-333333333301',
@@ -196,7 +155,7 @@ function createInitialMemoryStore(): MemoryStore {
     'https://t.me/cspotofficial';
 
   return {
-    workshops: [solidworksWorkshop, advancedCourse],
+    workshops: [solidworksWorkshop],
     workshopDays,
     registrations: [],
     paymentOrders: [],

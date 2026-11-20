@@ -41,14 +41,6 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/courses/advanced-product-design-dfm"
-                  className="hover:text-amber-400 transition-colors"
-                >
-                  Advanced Product Design &amp; DFM
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/lookup"
                   className="hover:text-amber-400 transition-colors"
                 >
