@@ -23,6 +23,6 @@ export function verifyAdminCredentials(email: string, password: string): boolean
   const configuredPassword =
     process.env.ADMIN_ACCESS_PASSWORD || 'cspot_admin_2026_secure';
 
-  if (!email.includes('@')) return false;
-  return password === configuredPassword;
+  if (!email || !email.includes('@')) return false;
+  return password.trim() === configuredPassword.trim();
 }
